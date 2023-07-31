@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'interview-frontend';
+  searchResults: any[] = [];
+
+  constructor(private apiService: ApiService) {}
+
+  // You can handle the search results received from the service here
+  // and update the searchResults property.
+  handleSearchResults(data: any): void {
+    this.searchResults = data;
+  }
 }

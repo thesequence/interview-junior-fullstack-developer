@@ -1,5 +1,5 @@
-<form (ngSubmit)="onSubmit()"> <!-- This form will set to call the onSubmit() method when the form is submitted -->
-<label for="cityInput">Enter a city name:</label>
-<input id="cityInput" name="city" type="text" [(ngModel)]="searchQuery" required> <!-- The value entered by the user in the input field will be bound to the searchQuery -->
-<button type="submit">Search</button>
+<form #searchForm="ngForm" (ngSubmit)="onSubmit()">
+  <label for="cityInput">Enter a city name:</label>
+  <input type="text" id="cityInput" name="searchQuery" ngModel required>
+  <button type="submit">Search</button>
 </form>
