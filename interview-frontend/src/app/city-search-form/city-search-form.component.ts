@@ -15,8 +15,8 @@ export class CitySearchFormComponent {
     // Call the API service to search for cities
     this.apiService.searchCities(this.searchQuery).subscribe({
       next: (data) => {
-        this.citiesList.push = data;
-        console.log('Recived data:', data);
+        this.citiesList = data;
+        console.log('Received data:', data);
       },
       error: (error) => {
         console.error('Error:', error);
