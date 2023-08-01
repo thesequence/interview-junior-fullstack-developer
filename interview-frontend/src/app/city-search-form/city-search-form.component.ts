@@ -7,6 +7,7 @@ import { ApiService } from '../services/api.service';
 })
 export class CitySearchFormComponent {
   searchQuery: string = '';
+  citiesList: any[] = [];
 
   constructor(private apiService: ApiService) {}
 
@@ -14,7 +15,8 @@ export class CitySearchFormComponent {
     // Call the API service to search for cities
     this.apiService.searchCities(this.searchQuery).subscribe({
       next: (data) => {
-        console.log('Received data:', data);
+        this.citiesList.push = data;
+        console.log('Recived data:', data);
       },
       error: (error) => {
         console.error('Error:', error);
