@@ -1,15 +1,28 @@
-<div>
+<div class="container">
   <form (ngSubmit)="onSubmit()">
-    <input type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Enter city name" />
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      name="searchQuery"
+      placeholder="Enter city name"
+    />
     <button type="submit">Search</button>
   </form>
 </div>
 
-<div *ngIf="allCitiesList.length > 0"> <!-- Use allCitiesList instead of citiesList -->
-  <h2>Search Results:</h2>
-  <ul>
-    <li *ngFor="let city of allCitiesList">
-      {{ city.cityName }} - Count: {{ city.count }}
-    </li>
-  </ul>
+<div class="result-container" *ngIf="allCitiesList.length>0">
+  <h2>We found for you:</h2>
+  <div class="card-container">
+    <div class="card" *ngFor="let city of allCitiesList">
+      <div class="card-content">
+        <div class="card-header">In the city</div>
+        <div class="city-name">{{ city.cityName }}</div>
+        <div class="found-results">We found results</div>
+        <div class="city-count">{{ city.count }}</div>
+        <div class="see-results-btn-container">
+          <button class="see-results-btn">See Results</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

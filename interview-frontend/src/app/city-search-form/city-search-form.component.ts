@@ -9,6 +9,7 @@ export class CitySearchFormComponent {
   searchQuery: string = '';
   citiesList: any[] = [];
   allCitiesList: any[] = [];
+  showResults: boolean = false;
 
   constructor(private apiService: ApiService) {}
 
@@ -18,6 +19,7 @@ export class CitySearchFormComponent {
       next: (data) => {
         this.citiesList = data;
         this.allCitiesList = this.allCitiesList.concat(data);
+        this.showResults = true;
         console.log('Received data:', data);
       },
       error: (error) => {

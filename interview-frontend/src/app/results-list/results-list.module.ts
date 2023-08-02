@@ -5,6 +5,6 @@ import { ResultsListComponent } from './results-list.component';
 @NgModule({
   declarations: [ResultsListComponent],
   imports: [CommonModule],
-  exports: [ResultsListComponent], // Export the component here
+  exports: [ResultsListComponent], 
 })
 export class ResultsListModule {}

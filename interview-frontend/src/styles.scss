@@ -1,1 +1,140 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* Container styles for the search form and results */
+.container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Basic styling for the form */
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for the search results */
+.result-container {
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 200px;
+}
+
+.card-content {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.card-header {
+  font-size: 1.5rem;
+}
+
+.city-name {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.found-results {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.city-count {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.see-results-btn-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.see-results-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.see-results-btn:hover {
+  background-color: #0056b3;
+}

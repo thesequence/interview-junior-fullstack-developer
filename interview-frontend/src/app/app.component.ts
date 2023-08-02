@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private apiService: ApiService) {}
 
-  // You can handle the search results received from the service here
+  // Here we can handle the search results received from the service here
   // and update the searchResults property.
   handleSearchResults(data: any): void {
     this.citiesList = data;

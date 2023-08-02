@@ -8,22 +8,24 @@ import { ResultsListComponent } from './results-list/results-list.component';
 
 import { ApiService } from './services/api.service';
 
-
-
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, RouterTestingModule], // Include RouterTestingModule in the imports
-      declarations: [AppComponent, CitySearchFormComponent, ResultsListComponent],
-      providers: [ApiService], // If ApiService is not already added here
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      declarations: [
+        AppComponent,
+        CitySearchFormComponent,
+        ResultsListComponent,
+      ],
+      providers: [ApiService],
     }).compileComponents();
   });
 
   it('should create the app', () => {
-    fixture = TestBed.createComponent(AppComponent); // Use the fixture from beforeEach instead of creating a new one
+    fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
